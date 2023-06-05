@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+ *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Viewer for the H264 frames of RDP server">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta itemprop="description" content="Viewer for the H264 frames of RDP server">
+    <meta itemprop="image" content="icon">
+    <meta itemprop="name" content="Viewer for the H264 frames of RDP server">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+
+    <base target="_blank">
+
+    <title>H264 Viewer</title>
+
+    <link rel="icon" sizes="192x192" href="icon.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="sub-main.css">
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <h1>
+            <span>H264 Viewer</span>
+        </h1>
+
+        <div>
+            <input type="file" id="fileInput" multiple hidden/>
+        </div>
+
+        <div>
+            <button id="select">Select</button>
+            <button id="reset" disabled>Reset</button>
+            <button id="play" disabled>Play</button>
+            <button id="next" disabled>Next</button>
+            <button id="goto" disabled>GoTo</button>
+            <input type="text" id="frameId" disabled/>
+            &nbsp;
+            <span id="infoMsg">Total frames: 0, Current frame: 0</span>
+        </div>
+
+        <div>
+            <h4>H264 Draw</h4>
+        </div>
+
+        <div>
+            <canvas id="h264image" style="border:1px solid black"></canvas>
+        </div>
+
+    </div>
+
+    <script src="h264-lib/Decoder.js"></script>
+    <script src="h264-lib/YUVCanvas.js"></script>
+    <script src="h264-lib/Player.js"></script>
+    <script src="h264-lib/h264draw.js"></script>
+    <script src="main.js" async></script>
+
+</body>
+
+</html>
