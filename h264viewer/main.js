@@ -34,7 +34,7 @@ function readFiles(i) {
         return;
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', window.origin + '/hancai-apporto.github.io/h264viewer/resources/' + i.toString().padStart(4, '0') + '.h264', true);
+    xhr.open('GET', window.origin + '/h264viewer/resources/' + i.toString().padStart(4, '0') + '.h264', true);
     xhr.responseType = 'arraybuffer';
     xhr.onload = async function() {
 
