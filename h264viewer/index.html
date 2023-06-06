@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="sub-main.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -36,26 +37,7 @@
         <h1>
             <span>H264 Viewer</span>
         </h1>
-
-        <div>
-            <input type="file" id="fileInput" multiple hidden/>
-        </div>
-
-        <div>
-            <button id="select">Select</button>
-            <button id="reset" disabled>Reset</button>
-            <button id="play" disabled>Play</button>
-            <button id="next" disabled>Next</button>
-            <button id="goto" disabled>GoTo</button>
-            <input type="text" id="frameId" disabled/>
-            &nbsp;
-            <span id="infoMsg">Total frames: 0, Current frame: 0</span>
-        </div>
-
-        <div>
-            <h4>H264 Draw</h4>
-        </div>
-
+        
         <div>
             <canvas id="h264image" style="border:1px solid black"></canvas>
         </div>
