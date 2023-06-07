@@ -346,6 +346,7 @@
 
     var vertexShader = gl.createShader(gl.VERTEX_SHADER);
     if (gl.isContextLost()) {
+      window.log_message += "Vertex shader failed to compile" + `\n`;
       this.failedToCreate = true;
       Rollbar.error('Vertex shader failed to compile: ' + gl.getShaderInfoLog(vertexShader));
       return;
@@ -358,6 +359,7 @@
 
     var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
     if (gl.isContextLost()) {
+      window.log_message += "Fragment shader failed to compile" + `\n`;
       this.failedToCreate = true;
       Rollbar.error('Fragment shader failed to compile: ' + gl.getShaderInfoLog(fragmentShader));
       return;
@@ -390,6 +392,7 @@
   YUVCanvas.prototype.initBuffers = function() {
     var gl = this.contextGL;
 
+    window.log_message += "initBuffers: " + this.failedToCreate + `\n`;
     if (this.failedToCreate) return;
 
     var program = this.shaderProgram;
@@ -481,6 +484,7 @@
   YUVCanvas.prototype.initTextures = function() {
     var gl = this.contextGL;
 
+    window.log_message += "initTextures: " + this.failedToCreate + `\n`;
     if (this.failedToCreate) return;
 
     var program = this.shaderProgram;
