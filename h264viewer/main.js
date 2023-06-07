@@ -70,6 +70,7 @@ function sleep(ms) {
 window.log_message = "";
 
 window.addEventListener('beforeunload', function() {
+    return;
     const blob = new Blob([window.log_message ], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
